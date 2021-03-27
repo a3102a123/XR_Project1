@@ -23,18 +23,21 @@ public class CheckDialogue : MonoBehaviour
     void Update()
     {
         get_grab_item();
-        if(GM.get_state() != target_attr.scene){
+        
+        if(target_attr.trigger_scene == GameState.OTHER){
+            Debug.Log("Other scene");
+            activate_dialogue();
+        }
+        else if(GM.get_state() != target_attr.trigger_scene){
             Debug.Log("Wrong scene");
             this.enabled = false;
         }
         else{
             Debug.Log("Correct scene");
-            GM.set_talking();
-            win_fun.enabled = true;
-            win_fun.dialogue_filename = target_attr.dialogue_filename;
-            this.enabled = false;
+            activate_dialogue();
         }
     }
+
     private void init(){
         // get current game state (store in GameManager)
         GM_obj = GameObject.Find("GameManager");
@@ -53,6 +56,14 @@ public class CheckDialogue : MonoBehaviour
             }
         }
         target_attr = target_obj.GetComponent<ObjAttribute>();
-        Debug.Log("Obj scene : " + target_attr.scene);
+        Debug.Log("Obj scene : " + target_attr.trigger_scene);
+    }
+    // initial parameter to start displaying dialogue
+    private void activate_dialogue(){
+        GM.set_talking();
+        win_fun.enabled = true;
+        win_fun.dialogue_filename = target_attr.dialogue_filename;
+        win_fun.next_state = target_attr.next_scene;
+        this.enabled = false;
     }
 }

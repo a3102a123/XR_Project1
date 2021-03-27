@@ -5,7 +5,8 @@ using UnityEngine;
 public class ObjAttribute : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameState scene;
+    public GameState trigger_scene;
+    public GameState next_scene;
     public string dialogue_filename;
     void Start()
     {

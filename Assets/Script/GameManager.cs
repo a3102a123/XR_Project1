@@ -10,21 +10,26 @@ public enum GameState {
     SCENE2,
     SCENE3,
     SCENE4,
+    OTHER,
     DISABLE
 }
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager GM;
+    // default display time
+    public float dis_time;
+
     private static GameState stage_state; 
     public static GameState current_state;
     private void Awake() {
         DontDestroyOnLoad(gameObject);
-        change_scene(GameState.SCENE1);
+        set_scene(GameState.SCENE1);
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        GM = this;
     }
 
     // Update is called once per frame
@@ -37,10 +42,19 @@ public class GameManager : MonoBehaviour
         return current_state;
     }
 
-    private void change_scene(GameState next_state){
-        stage_state = next_state;
-        current_state = next_state;
-        Debug.Log("Set up to : " + current_state);
+    public void set_scene(GameState next_state){
+        switch (next_state)
+        {
+            case GameState.OTHER:
+                current_state = stage_state;
+                Debug.Log("Set up scene back to : " + current_state);
+                break;
+            default:
+                stage_state = next_state;
+                current_state = next_state;
+                Debug.Log("Change scene to : " + current_state);
+                break;
+        }
     }
 
     public void set_talking(){
