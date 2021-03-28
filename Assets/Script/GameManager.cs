@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // Reference website : https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html?_ga=2.266262607.1952254344.1616490663-554022353.1614679359
 
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GM = this;
+        SceneManager.LoadScene("Room");
     }
 
     // Update is called once per frame
