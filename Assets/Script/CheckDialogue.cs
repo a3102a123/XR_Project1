@@ -17,6 +17,7 @@ public class CheckDialogue : MonoBehaviour
     void Start()
     {
         init();
+        //GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
