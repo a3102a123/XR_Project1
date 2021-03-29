@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public enum GameState {
     TALKING,
+    SCENE0,
     SCENE1,
     SCENE2,
     SCENE3,
@@ -26,19 +27,13 @@ public class GameManager : MonoBehaviour
     public static GameState current_state;
     private void Awake() {
         DontDestroyOnLoad(gameObject);
-        set_scene(GameState.SCENE1);
+        set_scene(GameState.SCENE0);
     }
     // Start is called before the first frame update
     void Start()
     {
         GM = this;
-        SceneManager.LoadScene("Room");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //SceneManager.LoadScene("Room");
     }
 
     public GameState get_state(){
