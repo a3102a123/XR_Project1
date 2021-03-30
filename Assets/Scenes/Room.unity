@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 2
-  next_scene: 2
+  trigger_scene: 6
+  next_scene: 6
   dialogue_filename: book4.txt
 --- !u!114 &18562473
 MonoBehaviour:
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 2
-  next_scene: 2
+  trigger_scene: 6
+  next_scene: 6
   dialogue_filename: book1.txt
 --- !u!114 &41624339
 MonoBehaviour:
@@ -2131,8 +2131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 2
-  next_scene: 3
+  trigger_scene: 3
+  next_scene: 4
   dialogue_filename: scene2.txt
 --- !u!65 &367728594
 BoxCollider:
@@ -2412,8 +2412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 2
-  next_scene: 2
+  trigger_scene: 6
+  next_scene: 6
   dialogue_filename: book2.txt
 --- !u!114 &387522973
 MonoBehaviour:
@@ -3297,8 +3297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 2
-  next_scene: 2
+  trigger_scene: 6
+  next_scene: 6
   dialogue_filename: book3.txt
 --- !u!114 &766278815
 MonoBehaviour:
@@ -3808,8 +3808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 1
-  next_scene: 2
+  trigger_scene: 2
+  next_scene: 3
   dialogue_filename: scene1.txt
 --- !u!114 &862711292
 MonoBehaviour:
@@ -4747,7 +4747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_scene: LivingRoom
-  next_scene_state: 3
+  next_scene_state: 4
   fadeImage: {fileID: 859833495}
   delay: 3
   Fadeout_color: {r: 0, g: 0, b: 0, a: 1}
@@ -5127,18 +5127,7 @@ MonoBehaviour:
       m_Calls: []
   OnTouch:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1343763646}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 0
+      m_Calls: []
   OnUntouch:
     m_PersistentCalls:
       m_Calls: []

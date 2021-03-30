@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
     public static GameManager GM;
     // default display time
     public float dis_time;
-
-    private static GameState stage_state; 
-    public static GameState current_state;
+    [SerializeField]
+    private GameState stage_state; 
+    [SerializeField]
+    private GameState current_state;
     private void Awake() {
         DontDestroyOnLoad(gameObject);
         set_scene(GameState.SCENE0);
