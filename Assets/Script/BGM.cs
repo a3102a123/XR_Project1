@@ -39,7 +39,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[0];
-                    mAudioSource.volume = 0.5f;
+                    mAudioSource.volume = 0.15f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene0");
                     playing = true;
@@ -61,6 +61,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[1];
+                    mAudioSource.volume = 1.0f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene2");
                     playing = true;

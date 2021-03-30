@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: book4.txt
 --- !u!114 &18562473
 MonoBehaviour:
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: book1.txt
 --- !u!114 &41624339
 MonoBehaviour:
@@ -2236,8 +2236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: diary.txt
 --- !u!65 &381916045
 BoxCollider:
@@ -2437,7 +2437,7 @@ PrefabInstance:
     - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.482
+      value: 0.487
       objectReference: {fileID: 0}
     - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
         type: 3}
@@ -2483,6 +2483,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TheBook2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559400028219776039, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de24ca713691cf8468455ca9f0388ec7, type: 3}
@@ -2667,8 +2672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: book2.txt
 --- !u!114 &387522973
 MonoBehaviour:
@@ -2757,6 +2762,12 @@ MonoBehaviour:
   OnUnsnapFromDropZone:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &387522976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+    type: 3}
+  m_PrefabInstance: {fileID: 387522962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &428446276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2960,6 +2971,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7706e5171d5ded439ecf9f3f76754a5, type: 3}
+--- !u!1001 &490779014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 387522976}
+    m_Modifications:
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00011008516
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0014894131
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00095322606
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.71585304
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000031664968
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.698251
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 427620743264200520, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 85.94501
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055221514823646706, guid: de24ca713691cf8468455ca9f0388ec7,
+        type: 3}
+      propertyPath: m_Name
+      value: TheBooks (1) Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de24ca713691cf8468455ca9f0388ec7, type: 3}
 --- !u!1 &586059393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,8 +3704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: book3.txt
 --- !u!114 &766278815
 MonoBehaviour:
@@ -3946,7 +4041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4498,8 +4593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ab8a58dc2665f4eb5d10d9c056361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger_scene: 6
-  next_scene: 6
+  trigger_scene: 10
+  next_scene: 10
   dialogue_filename: photo.txt
 --- !u!114 &1033835566
 MonoBehaviour:
