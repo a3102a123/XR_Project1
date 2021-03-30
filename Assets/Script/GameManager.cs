@@ -14,6 +14,7 @@ public enum GameState {
     SCENE3,
     SCENE3_5,
     SCENE4,
+    SCENE4_1,
     SCENE4_2,
     SCENE4_3,
     OTHER,
@@ -25,12 +26,18 @@ public class GameManager : MonoBehaviour
     public static GameManager GM;
     // default display time
     public float dis_time;
-
-    private static GameState stage_state;
-    public static GameState current_state;
+    [SerializeField]
+    private GameState stage_state;
+    [SerializeField]
+    private GameState current_state;
+    private Dictionary<GameState,string> hint_path_dir = new Dictionary<GameState,string>();
     private void Awake() {
         DontDestroyOnLoad(gameObject);
         set_scene(GameState.SCENE0);
+        //initial dir content
+        hint_path_dir.Add(GameState.SCENE1,"hint/Scene1.txt");
+        hint_path_dir.Add(GameState.SCENE2,"hint/Scene2.txt");
+        hint_path_dir.Add(GameState.SCENE3,"hint/Scene3.txt");
     }
     // Start is called before the first frame update
     void Start()
@@ -61,5 +68,12 @@ public class GameManager : MonoBehaviour
     public void set_talking(){
         current_state = GameState.TALKING;
         Debug.Log("Change to : " + current_state);
+    }
+
+    public string get_hint_path(){
+        string path ;
+        hint_path_dir.TryGetValue(stage_state,out path);
+        Debug.Log("Hint file path : "+ (path == null));
+        return path;
     }
 }

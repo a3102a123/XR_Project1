@@ -18,17 +18,15 @@ public class ChangeScene2 : MonoBehaviour
     {
       Debug.Log("this.enabled");
       Debug.Log(GameManager.GM.get_state());
-      if(GameManager.GM.get_state() == GameState.SCENE3){
+      if(GameManager.GM.get_state() == GameState.SCENE3_5){
           Debug.Log("change2");
           script_obj = GameObject.Find("Script");
           change_scene = script_obj.GetComponent<ChangeScene>();
           change_scene.enable_scene_state = GameState.SCENE4;
           win_fun = script_obj.GetComponent<DisplayDialogue>();
-          win_fun.dialogue_filename = "scene3.5.txt";
+          win_fun.dialogue_filename = "scene3_5.txt";
           win_fun.next_state = GameState.SCENE4;
           win_fun.enabled = true;
-          // father = GameObject.Find("father");
-          // father.enabled = true;
       }
       this.enabled = false;
       return;
