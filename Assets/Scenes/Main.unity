@@ -2238,6 +2238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dis_time: 10
+  stage_state: 0
+  current_state: 0
 --- !u!4 &856368706
 Transform:
   m_ObjectHideFlags: 0
