@@ -50,8 +50,8 @@ public class StartScene : MonoBehaviour
         {
             TextWindow.text = "";
             GameState Now = GM.get_state();
-            GM.set_scene(Now + 1);
+            GM.set_scene(GameState.SCENE1);
             CS.GetComponent<ChangeScene>().enabled = true;
         }
-    } 
+    }
 }

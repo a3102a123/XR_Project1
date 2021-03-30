@@ -12,7 +12,10 @@ public enum GameState {
     SCENE1,
     SCENE2,
     SCENE3,
+    SCENE3_5,
     SCENE4,
+    SCENE4_2,
+    SCENE4_3,
     OTHER,
     DISABLE
 }
@@ -23,7 +26,7 @@ public class GameManager : MonoBehaviour
     // default display time
     public float dis_time;
 
-    private static GameState stage_state; 
+    private static GameState stage_state;
     public static GameState current_state;
     private void Awake() {
         DontDestroyOnLoad(gameObject);
@@ -33,7 +36,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GM = this;
-        //SceneManager.LoadScene("Room");
+        // SceneManager.LoadScene("Room");
     }
 
     public GameState get_state(){

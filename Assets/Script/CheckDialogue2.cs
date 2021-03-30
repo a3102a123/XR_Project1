@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class CheckDialogue : MonoBehaviour
+public class CheckDialogue2 : MonoBehaviour
 {
     private GameObject GM_obj;
     private GameManager GM;
@@ -17,13 +17,12 @@ public class CheckDialogue : MonoBehaviour
     void Start()
     {
         init();
-        //GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        get_grab_item();
+        get_touch_item();
 
         if(target_attr.trigger_scene == GameState.OTHER){
             Debug.Log("Other scene");
@@ -47,11 +46,11 @@ public class CheckDialogue : MonoBehaviour
         win_fun = script_obj.GetComponent<DisplayDialogue>();
     }
     // get the grabbed item on controller
-    private void get_grab_item(){
+    private void get_touch_item(){
         Debug.Log("Game state : " + GM.get_state());
         controllers = GameObject.FindGameObjectsWithTag("GameController");
         for(i = 0 ; i < controllers.Length ; i++){
-            target_obj = controllers[i].GetComponent<VRTK_InteractGrab>().GetGrabbedObject();
+            target_obj = controllers[i].GetComponent<VRTK_InteractTouch>().GetTouchedObject();
             if(target_obj != null){
                 break;
             }
