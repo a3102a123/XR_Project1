@@ -87,12 +87,14 @@ public class DisplayDialogue : MonoBehaviour
 
     //controller trigger dialogue continue
     void continue_read(){
+        Debug.Log("In continue read");
         is_read = true;
     }
 
     //default dialogue display time,continue when time out
     void wait(){
         is_read = true;
+        Debug.Log("In wait");
         // Debug.Log("wait end" + Time.time);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShowScene4 : MonoBehaviour
 {
     public GameObject father;
+    public GameObject mother;
     public GameObject choice;
     public GameObject choice1;
     
@@ -12,11 +13,9 @@ public class ShowScene4 : MonoBehaviour
     {
       if(GameManager.GM.get_state() == GameState.SCENE4){
           Debug.Log("change4");
-          // father = GameObject.Find("father");
           father.SetActive(true);
-          // choice = GameObject.Find("Choice");
+          mother.SetActive(false);
           choice.SetActive(true);
-          // choice1 = GameObject.Find("Choice1");
           choice1.SetActive(true);
           this.enabled = false;
       }

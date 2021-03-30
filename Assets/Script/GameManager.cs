@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
 
     public string get_hint_path(){
         string path ;
-        hint_path_dir.TryGetValue(stage_state,out path);
+        hint_path_dir.TryGetValue(current_state,out path);
         Debug.Log("Hint file path : "+ (path == null));
         return path;
     }

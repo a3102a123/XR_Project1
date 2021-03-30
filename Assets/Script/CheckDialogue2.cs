@@ -61,9 +61,9 @@ public class CheckDialogue2 : MonoBehaviour
     // initial parameter to start displaying dialogue
     private void activate_dialogue(){
         GM.set_talking();
-        win_fun.enabled = true;
         win_fun.dialogue_filename = target_attr.dialogue_filename;
         win_fun.next_state = target_attr.next_scene;
+        win_fun.enabled = true;
         this.enabled = false;
     }
 }
