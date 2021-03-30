@@ -12,7 +12,11 @@ public enum GameState {
     SCENE1,
     SCENE2,
     SCENE3,
+    SCENE3_5,
     SCENE4,
+    SCENE4_1,
+    SCENE4_2,
+    SCENE4_3,
     OTHER,
     DISABLE
 }
@@ -23,7 +27,7 @@ public class GameManager : MonoBehaviour
     // default display time
     public float dis_time;
     [SerializeField]
-    private GameState stage_state; 
+    private GameState stage_state;
     [SerializeField]
     private GameState current_state;
     private Dictionary<GameState,string> hint_path_dir = new Dictionary<GameState,string>();
@@ -39,7 +43,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GM = this;
-        //SceneManager.LoadScene("Room");
+        // SceneManager.LoadScene("Room");
     }
 
     public GameState get_state(){

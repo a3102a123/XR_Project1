@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2237,7 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d170469f1f4d6b54ea549e2af74b953c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dis_time: 10
+  dis_time: 1
   stage_state: 0
   current_state: 0
 --- !u!4 &856368706
@@ -4234,7 +4234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_scene: Room
-  next_scene_state: 2
+  enable_scene_state: 2
   fadeImage: {fileID: 1315766509}
   delay: 3
   Fadeout_color: {r: 0, g: 0, b: 0, a: 0}

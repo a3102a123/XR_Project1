@@ -8,31 +8,31 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public string next_scene;
-    public GameState next_scene_state;
+    public GameState enable_scene_state;
     [SerializeField]
     private Image fadeImage;
- 
+
     [SerializeField]
     private float delay;
- 
+
     [SerializeField]
     private Color Fadeout_color;
- 
+
     [SerializeField]
     private Color Fadein_color;
- 
+
     public bool sceneFading;
 
     float begin_time;
     float current_time;
     Color Image_color;
- 
+
     //----------------------------------
-    
+
     bool init_flag = true;
     private void Update()
     {
-        if(GameManager.GM.get_state() == next_scene_state){
+        if(GameManager.GM.get_state() == enable_scene_state){
             // SceneManager.LoadScene(next_scene);
             if(init_flag){
                 begin_time = Time.time;

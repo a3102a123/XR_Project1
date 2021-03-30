@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
 
-public class CheckDialogue : MonoBehaviour
+public class CheckDialogue2 : MonoBehaviour
 {
     private GameObject GM_obj;
     private GameManager GM;
@@ -17,13 +17,12 @@ public class CheckDialogue : MonoBehaviour
     void Start()
     {
         init();
-        //GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        get_grab_item();
+        get_touch_item();
 
         if(target_attr.trigger_scene == GameState.OTHER){
             Debug.Log("Other scene");
@@ -31,7 +30,7 @@ public class CheckDialogue : MonoBehaviour
         }
         else if(GM.get_state() != target_attr.trigger_scene){
             Debug.Log("Wrong scene");
-            activate_hint();
+            this.enabled = false;
         }
         else{
             Debug.Log("Correct scene");
@@ -47,11 +46,11 @@ public class CheckDialogue : MonoBehaviour
         win_fun = script_obj.GetComponent<DisplayDialogue>();
     }
     // get the grabbed item on controller
-    private void get_grab_item(){
+    private void get_touch_item(){
         Debug.Log("Game state : " + GM.get_state());
         controllers = GameObject.FindGameObjectsWithTag("GameController");
         for(i = 0 ; i < controllers.Length ; i++){
-            target_obj = controllers[i].GetComponent<VRTK_InteractGrab>().GetGrabbedObject();
+            target_obj = controllers[i].GetComponent<VRTK_InteractTouch>().GetTouchedObject();
             if(target_obj != null){
                 break;
             }
@@ -62,20 +61,9 @@ public class CheckDialogue : MonoBehaviour
     // initial parameter to start displaying dialogue
     private void activate_dialogue(){
         GM.set_talking();
+        win_fun.enabled = true;
         win_fun.dialogue_filename = target_attr.dialogue_filename;
         win_fun.next_state = target_attr.next_scene;
-        win_fun.enabled = true;
-        this.enabled = false;
-    }
-    // show hint dialogue when touch the wrong scene item
-    private void activate_hint(){
-        if((win_fun.dialogue_filename = GM.get_hint_path()) == null){
-            this.enabled = false;
-            return;
-        }
-        GM.set_talking();
-        win_fun.next_state = GameState.OTHER;
-        win_fun.enabled = true;
         this.enabled = false;
     }
 }
