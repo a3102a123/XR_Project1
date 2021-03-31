@@ -18,11 +18,6 @@ public class BGM : MonoBehaviour
         GM = GM_obj.GetComponent<GameManager>();
         Now = GM.get_state();
     }
-    public void ChangeScene()
-    {
-        Now = GM.get_state();
-        playing = false;
-    }
     public void Update()
     {
         GameState round = GM.get_state();
@@ -30,9 +25,12 @@ public class BGM : MonoBehaviour
         {
             if(Now != round)
             {
-                mAudioSource.Stop();
-                playing = false;
                 Now = round;
+                if (round != GameState.SCENE4_1)
+                {
+                    mAudioSource.Stop();
+                    playing = false;
+                }
             }
             if (Now == GameState.SCENE0)
             {
@@ -61,7 +59,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[1];
-                    mAudioSource.volume = 1.0f;
+                    mAudioSource.volume = 0.8f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene2");
                     playing = true;
@@ -72,6 +70,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[0];
+                    mAudioSource.volume = 0.15f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene3");
                     playing = true;
@@ -82,8 +81,42 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[1];
+                    mAudioSource.volume = 0.15f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene4");
+                    playing = true;
+                }
+            }
+            if (Now == GameState.SCENE3_5)
+            {
+                if (!playing)
+                {
+                    mAudioSource.clip = BGMs[2];
+                    mAudioSource.volume = 0.15f;
+                    mAudioSource.Play();
+                    Debug.Log("Playing Scene3_5");
+                    playing = true;
+                }
+            }
+            if (Now == GameState.SCENE4_2)
+            {
+                if (!playing)
+                {
+                    mAudioSource.clip = BGMs[3];
+                    mAudioSource.volume = 0.5f;
+                    mAudioSource.Play();
+                    Debug.Log("Playing Scene4_2");
+                    playing = true;
+                }
+            }
+            if (Now == GameState.SCENE4_3)
+            {
+                if (!playing)
+                {
+                    mAudioSource.clip = BGMs[2];
+                    mAudioSource.volume = 0.05f;
+                    mAudioSource.Play();
+                    Debug.Log("Playing Scene4_3");
                     playing = true;
                 }
             }
