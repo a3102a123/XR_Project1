@@ -1474,7 +1474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 6.3, y: 675}
+  m_AnchoredPosition: {x: 6.3, y: 850}
   m_SizeDelta: {x: 560, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273498763
@@ -4855,6 +4855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AudioSource: {fileID: 788249377}
+  cellphone: {fileID: 0}
   ClipList:
   - {fileID: 8300000, guid: 0af4baf3ca3983944809737a0c7c2a2b, type: 3}
   - {fileID: 8300000, guid: f39febb980aa07742a4e4482d5a11b86, type: 3}
@@ -6346,6 +6347,8 @@ MonoBehaviour:
   BGMs:
   - {fileID: 8300000, guid: dee0369defce43048a6eaf71c87d2342, type: 3}
   - {fileID: 8300000, guid: 9713c9e3fd9d2af44b1afbd5cf122f6d, type: 3}
+  - {fileID: 8300000, guid: ab94497a1a1326141a567268be77734f, type: 3}
+  - {fileID: 8300000, guid: c0bc67d671c80c641a9acd9900ef7d03, type: 3}
 --- !u!4 &1063532294
 Transform:
   m_ObjectHideFlags: 0
