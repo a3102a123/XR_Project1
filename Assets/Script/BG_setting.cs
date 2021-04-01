@@ -72,8 +72,8 @@ public class BG_setting : MonoBehaviour
             //set up GM to infinite display
             GameManager.GM.dis_time = 100000;
             //set up text window
-            TextWindow.fontSize = 80;
-            TextWindow.rectTransform.sizeDelta = new Vector2(700, 1000);
+            TextWindow.fontSize = 30;
+            TextWindow.rectTransform.sizeDelta = new Vector2(400, 500);
             win_fun.enabled = true;
         }
     }
