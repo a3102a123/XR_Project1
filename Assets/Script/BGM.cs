@@ -59,7 +59,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[1];
-                    mAudioSource.volume = 0.8f;
+                    mAudioSource.volume = 0.3f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene2");
                     playing = true;
@@ -81,20 +81,9 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[1];
-                    mAudioSource.volume = 0.15f;
+                    mAudioSource.volume = 0.1f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene4");
-                    playing = true;
-                }
-            }
-            if (Now == GameState.SCENE3_5)
-            {
-                if (!playing)
-                {
-                    mAudioSource.clip = BGMs[2];
-                    mAudioSource.volume = 0.15f;
-                    mAudioSource.Play();
-                    Debug.Log("Playing Scene3_5");
                     playing = true;
                 }
             }
@@ -103,7 +92,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[3];
-                    mAudioSource.volume = 0.5f;
+                    mAudioSource.volume = 0.15f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene4_2");
                     playing = true;
@@ -114,7 +103,7 @@ public class BGM : MonoBehaviour
                 if (!playing)
                 {
                     mAudioSource.clip = BGMs[2];
-                    mAudioSource.volume = 0.05f;
+                    mAudioSource.volume = 1.0f;
                     mAudioSource.Play();
                     Debug.Log("Playing Scene4_3");
                     playing = true;

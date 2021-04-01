@@ -15,7 +15,7 @@ public class StartScene : MonoBehaviour
     private int LINE_COUNT = 10;
 
     private string[] Lines = {  "在這個故事裏頭", "你將會扮演一位即將決定大學志願的高中生", "阿軒","你可以在他的房間內探索" ,"觸碰到可互動的物體時，會有黃色提示外框","此時可用Grip抓取並觸發事件",
-                                "同時外框會變成紅色","在遊戲中，你必須去感受阿軒的苦惱","並且幫他做出決定。","那麼，就讓我們開始吧!"};
+                                "同時外框會變成紅色","在遊戲中，你可以去感受阿軒的苦惱","並且幫他做出決定。","那麼，就讓我們開始吧!"};
     public Text TextWindow;
 
     public void Start()
